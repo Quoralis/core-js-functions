@@ -184,6 +184,7 @@ function logger(/* func, logFunc */) {
  * Return the function with partial applied arguments
  *
  * @param {Function} fn
+ * @param args1
  * @return {Function}
  *
  * @example
@@ -217,8 +218,8 @@ function partialUsingArguments(fn, ...args1) {
  *   getId10() => 11
  */
 const getIdGeneratorFunction = (startFrom) => {
-  let currentId = startFrom - 1; // Устанавливаем currentId на startFrom - 1
-  return function () {
+  let currentId = startFrom - 1;
+  return function a() {
     currentId += 1;
     return currentId;
   };
