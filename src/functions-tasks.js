@@ -116,7 +116,7 @@ function getPolynom() {
  */
 function memoize(func) {
   let cachedResult;
-  return function () {
+  return function a() {
     if (cachedResult === undefined) {
       cachedResult = func();
     }
@@ -140,7 +140,7 @@ function memoize(func) {
  * retryer() => 2
  */
 function retry(func, attempts) {
-  return function () {
+  return function a() {
     let lastError;
     for (let i = 0; i < attempts; i = +1) {
       try {
